@@ -1,0 +1,244 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://resources/label_font.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Main.gd" type="Script" id=2]
+[ext_resource path="res://PlotCanvas.gd" type="Script" id=3]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.262745, 0.262745, 0.262745, 1 )
+
+[node name="Main" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="."]
+margin_right = 600.0
+margin_bottom = 400.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 12.0
+margin_right = 102.0
+margin_bottom = 30.0
+custom_fonts/font = ExtResource( 1 )
+text = "请输入视频AV编号："
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" type="Label" parent="."]
+visible = false
+margin_left = 159.245
+margin_top = 39.0823
+margin_right = 306.245
+margin_bottom = 58.0823
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.439216, 0.701961, 0.737255, 1 )
+text = "读取评论中..."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartDate" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 176.0
+margin_right = 160.0
+margin_bottom = 216.0
+custom_fonts/font = ExtResource( 1 )
+text = "首条评论"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndDate" type="Label" parent="."]
+margin_left = 432.0
+margin_top = 176.0
+margin_right = 579.0
+margin_bottom = 216.0
+custom_fonts/font = ExtResource( 1 )
+text = "最新评论"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 232.0
+margin_right = 160.0
+margin_bottom = 251.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.760784, 0.819608, 0.223529, 1 )
+text = "[统计信息]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 13.0
+margin_top = 48.0
+margin_right = 160.0
+margin_bottom = 67.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.760784, 0.819608, 0.223529, 1 )
+text = "[时间趋势]"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 320.0
+margin_top = 232.0
+margin_right = 600.0
+margin_bottom = 273.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.760784, 0.819608, 0.223529, 1 )
+text = "[最活跃评论者]
+用户名                                    评论条数"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="RichTextLabel" parent="."]
+margin_left = 13.0
+margin_top = 256.0
+margin_right = 320.0
+margin_bottom = 400.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "总评论数：
+总楼层数（推定）：
+显示楼层数：
+缺失楼层数（推定）：
+
+
+[color=aqua]*注：本工具无法得知评论消失的原因[/color]"
+text = "总评论数：
+总楼层数（推定）：
+显示楼层数：
+缺失楼层数（推定）：
+
+
+*注：本工具无法得知评论消失的原因"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="RichTextLabel" parent="."]
+margin_left = 320.0
+margin_top = 376.0
+margin_right = 592.0
+margin_bottom = 400.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[color=aqua]*注：此处计数不包含楼中楼[/color]"
+text = "*注：此处计数不包含楼中楼"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopID" type="RichTextLabel" parent="."]
+margin_left = 320.0
+margin_top = 273.0
+margin_right = 512.0
+margin_bottom = 400.0
+custom_fonts/normal_font = ExtResource( 1 )
+bbcode_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Statistics" type="Label" parent="."]
+margin_left = 152.0
+margin_top = 256.0
+margin_right = 296.0
+margin_bottom = 352.0
+custom_fonts/font = ExtResource( 1 )
+text = "？
+？
+？
+？"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TopCount" type="Label" parent="."]
+margin_left = 448.0
+margin_top = 273.0
+margin_right = 576.0
+margin_bottom = 416.0
+custom_fonts/font = ExtResource( 1 )
+text = "？
+？
+？
+？
+？"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="LineEdit" parent="."]
+margin_left = 160.0
+margin_top = 11.0
+margin_right = 344.0
+margin_bottom = 32.0
+
+[node name="Submit" type="Button" parent="."]
+margin_left = 352.109
+margin_top = 8.8211
+margin_right = 396.109
+margin_bottom = 33.8211
+custom_fonts/font = ExtResource( 1 )
+text = "查询"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save" type="Button" parent="."]
+margin_left = 407.0
+margin_top = 9.0
+margin_right = 536.0
+margin_bottom = 34.0
+custom_fonts/font = ExtResource( 1 )
+disabled = true
+text = "导出JSON文件"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlotCanvas" type="ColorRect" parent="."]
+margin_left = 16.0
+margin_top = 72.0
+margin_right = 576.0
+margin_bottom = 168.0
+color = Color( 0.490196, 0.490196, 0.490196, 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="."]
+margin_right = 216.0
+margin_bottom = 130.0
+window_title = "保存文件"
+dialog_hide_on_ok = true
+access = 2
+current_dir = "C:/"
+current_path = "C:/"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Popup" type="AcceptDialog" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+window_title = ""
+[connection signal="meta_clicked" from="TopID" to="." method="_on_TopID_meta_clicked"]
+[connection signal="pressed" from="Submit" to="." method="_on_Submit_pressed"]
+[connection signal="pressed" from="Save" to="." method="_on_Save_pressed"]
+[connection signal="confirmed" from="FileDialog" to="." method="_on_FileDialog_confirmed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
