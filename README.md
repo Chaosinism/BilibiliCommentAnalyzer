@@ -1,6 +1,7 @@
 ## Bilibili评论统计工具
 
 **通知：由于B站修改了获取评论的API，这个工具已不能正常使用，若仍有兴趣请关注本工具的油猴版。——2020/08/03**
+
 **通知：本工具将作为油猴脚本在[新的仓库](https://github.com/Chaosinism/BilibiliCommentAnalyzer_js)中维护。——2020/06/05**
 
 [工具说明](https://chaosinism.github.io/posts/comment-analyzer/)
